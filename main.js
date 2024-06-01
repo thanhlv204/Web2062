@@ -4,20 +4,32 @@ const show = () => {
   fetch("http://localhost:3000/products")
     .then((response) => response.json())
     .then((data) => {
-     app.innerHTML =  data.map((item, index) => {
-        return `
+      app.innerHTML = data
+        .map((item, index) => {
+          return `
         <tr>
         <td>${index + 1}</td>
         <td>${item.name}</td>
         <td><img src="${item.image}"></td>
         <td>${item.price}</td>
         <td>
-            <button>Delete</button>
+            <button class="btn-delete" data-id="${item.id}">Delete</button>
         </td>
     </tr>
             `;
-      })
-      .join("");
-    });  
+        })
+        .join("");
+    })
+    .then(() => {
+      const btnDeletes = document.querySelectorAll(".btn-delete");
+      for (let btn of btnDeletes) {
+        btn.addEventListener("click", () => {
+          let id = btn.dataset.id;
+          fetch("http://localhost:3000/products/" + id, {
+            method: "DELETE",
+          });
+        });
+      }
+    });
 };
 show();
