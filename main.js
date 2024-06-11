@@ -13,9 +13,13 @@ const show = () => {
         <td><img src="${item.image}"></td>
         <td>${item.price}</td>
         <td>
+          <a href="./productEdit.html?id=${item.id}"><button>Update</button></a>
             <button class="btn-delete" data-id="${item.id}">Delete</button>
         </td>
+        
     </tr>
+
+    
             `;
         })
         .join("");

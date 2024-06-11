@@ -1,22 +1,40 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Iphone 12",
+      "price": "9002",
       "image": "https://picsum.photos/200/300",
-      "price": 1000
+      "id": "2"
     },
     {
-      "id": 2,
-      "name": "Iphone 11",
-      "image": "https://picsum.photos/200/300",
-      "price": 900
-    },
-    {
-      "id": 3,
+      "id": "3",
       "name": "Iphone 10",
       "image": "https://picsum.photos/200/300",
       "price": 800
+    },
+    {
+      "id": "bf50",
+      "name": "sasung",
+      "price": "2000000",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": "1c8f",
+      "name": "nguyen",
+      "price": "12345",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": "6fe5",
+      "name": "nguyen",
+      "price": "12345",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "name": "nguyen",
+      "price": "123",
+      "image": "https://picsum.photos/150/200",
+      "id": "122b"
     }
   ]
 }
